@@ -1,0 +1,15 @@
+rfm_run:
+    path:  /rfm_run/{instance}
+    defaults: { _controller: FMRFMBundle:RFM:load, instance: default }
+
+rfm_show:
+    path: /rfm_show/{instance}
+    defaults: { _controller: FMRFMBundle:RFM:show, instance: default }
+
+rfm_config:
+    path: /rfm_config.json
+    defaults: { _controller: FMRFMBundle:RFM:config}
+
+rfm_config_default:
+    path: /rfm_config.json
+    defaults: { _controller: FMRFMBundle:RFM:configDefault}

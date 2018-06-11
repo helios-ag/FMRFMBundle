@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <parameters>
+        <parameter key="fm_rfm.loader">FM\RFMBundle\Loader\RFMLoader</parameter>
+        <parameter key="fm_rfm.configurator">FM\RFMBundle\Configuration\RFMConfigurationReader</parameter>
+    </parameters>
+
+    <services>
+        <service id="fm_rfm.configurator.default" class="%fm_rfm.configurator%">
+            <argument>%fm_rfm%</argument>
+            <argument type="service" id="router"/>
+        </service>
+        <service id="fm_rfm.loader.default" class="%fm_rfm.loader%">
+            <argument type="service" id="fm_rfm.configurator"/>
+        </service>
+        <service id="twig.extension.fm_rfm_init" class="FM\RFMBundle\Twig\Extension\FMRFMExtension">
+            <argument type="service" id="twig"/>
+            <tag name="twig.extension" alias="fm_rfm_init" />
+        </service>
+    </services>
+</container>

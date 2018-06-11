@@ -1,0 +1,50 @@
+{
+    "name": "helios-ag/fm-rfm-bundle",
+    "description": "RichFilemanager bundle, adds RichFilemanager file manager to your Symfony project",
+    "keywords": ["RichFilemanager","file manager","wysiwyg"],
+    "type": "symfony-bundle",
+    "homepage": "https://github.com/helios-ag/FMRFMBundle",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Al Ganiev",
+            "email": "helios.ag@gmail.com"
+        },
+        {
+            "name": "Symfony Community",
+            "homepage": "https://github.com/helios-ag/FMRFMBundle/contributors"
+        }
+    ],
+    "archive": {
+      "exclude": ["/Tests"]
+    },
+    "require": {
+        "php":                                 "^5.6|^7.0",
+        "symfony/framework-bundle":            "~3.4|~4.0",
+        "symfony/twig-bundle":                 "~3.4|~4.0",
+        "symfony/form":                        "~3.4|~4.0",
+        "symfony/asset":                       "~3.4|~4.0"
+    },
+    "require-dev" : {
+        "symfony/phpunit-bridge": "~3.4|~4.0",
+        "matthiasnoback/symfony-config-test":  "~2",
+        "matthiasnoback/symfony-dependency-injection-test": "~1|~2",
+        "symfony/finder": "~2.8|~3.0|~4.0",
+        "satooshi/php-coveralls": "~1",
+        "phpunit/phpunit": "~5"
+    },
+    "suggest": {
+        "helios-ag/fm-tinymce-bundle": "TinyMCE Bundle",
+        "helios-ag/fm-summernote-bundle": "Summernote Bundle",
+        "fos/ckeditor-bundle": "CKEditor Bundle"
+    },
+    "autoload": {
+        "psr-4": { "FM\\RFMBundle\\": "" }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
