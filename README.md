@@ -7,7 +7,7 @@ FMRFMBundle
 
 | TravisCI | License | Version | Downloads |
 |----------| --------|---------|----------|
-|[![Build Status](https://travis-ci.org/helios-ag/FMRFMBundle.svg?branch=master)](http://travis-ci.org/helios-ag/FMElfinderBundle)|[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)|[![Latest Stable Version](https://poser.pugx.org/helios-ag/fm-elfinder-bundle/v/stable.svg)](https://packagist.org/packages/helios-ag/fm-rfm-bundle)|[![Total Downloads](https://poser.pugx.org/helios-ag/fm-elfinder-bundle/downloads.svg)](https://packagist.org/packages/helios-ag/fm-rfm-bundle)|
+|[![Build Status](https://travis-ci.org/helios-ag/FMRFMBundle.svg?branch=master)](http://travis-ci.org/helios-ag/FMElfinderBundle)|[![License](https://poser.pugx.org/helios-ag/fm-rfm-bundle/license)](https://packagist.org/packages/helios-ag/fm-rfm-bundle)|[![Latest Stable Version](https://poser.pugx.org/helios-ag/fm-rfm-bundle/v/stable)](https://packagist.org/packages/helios-ag/fm-rfm-bundle)|[![Total Downloads](https://poser.pugx.org/helios-ag/fm-rfm-bundle/downloads)](https://packagist.org/packages/helios-ag/fm-rfm-bundle)|
 
 
 **RichfileManager** An open-source file manager. http://fm.devale.pro
@@ -18,16 +18,8 @@ FMRFMBundle
 - [Installation](#installation)
     - [Step 1: Installation](#step-1-installation)
     - [Step 2: Enable the bundle](#step-2-enable-the-bundle)
-    - [Step 3: Import FMElfinderBundle routing file](#step-3-import-fmrfmbundle-routing-file)
+    - [Step 3: Import FMRFMBundle routing file](#step-3-import-fmrfmbundle-routing-file)
     - [Step 4: Securing paths](#step-4-configure-your-applications-securityyml)
-- [Basic configuration](#basic-configuration)
-    - [Add configuration options to your config.yml](#add-configuration-options-to-your-configyml)
-    - [Use multiple upload folder by instance](#use-multiple-upload-folder-by-instance)
-- [RichfileManager Form Type](/Resources/doc/elfinder-form-type.md)
-- [CKEditor integration](/Resources/doc/ckeditor-integration.md)
-    - [Installation](/Resources/doc/ckeditor-integration.md#step-1-installation)
-    - [Configuration](/Resources/doc/ckeditor-integration.md#step-2-configure-ckeditor-setting-via-settingsyml-or-through-form-builder)
-
 
 ## Installation
 
@@ -77,7 +69,7 @@ public function registerBundles()
 }
 ```
 
-### Step 3: Import FMElfinderBundle routing file
+### Step 3: Import FMRFMBundle routing file
 
 ``` yaml
 # app/config/routing.yml
