@@ -11,5 +11,5 @@ rfm_config:
     defaults: { _controller: FMRFMBundle:RFM:config}
 
 rfm_config_default:
-    path: /rfm_config.json
+    path: /rfm_config_default.json
     defaults: { _controller: FMRFMBundle:RFM:configDefault}

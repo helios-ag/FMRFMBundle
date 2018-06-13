@@ -38,11 +38,12 @@ class FMRFMExtension extends \Twig_Extension
 
     /**
      * @param string $instance
-     * @param array  $parameters
-     *
-     * @throws \Twig_Error_Runtime
+     * @param array $parameters
      *
      * @return mixed
+     * @throws \Twig_Error_Loader
+     * @throws \Twig_Error_Runtime
+     * @throws \Twig_Error_Syntax
      */
     public function tinymce($instance = 'default', $parameters = array('width' => 900, 'height' => 450, 'title' => 'rfm 2.0'))
     {

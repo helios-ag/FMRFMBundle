@@ -1,16 +1,37 @@
 {% block rfm_widget %}
-    <input type="text" {{ block('widget_attributes') }} {% if value is not empty %}value="{{ value }}" {% endif %} data-type="elfinder-input-field" />
+    <input type="text" {{ block('widget_attributes') }} {% if value is not empty %}value="{{ value }}" {% endif %} data-type="rfm-input-field" />
     {% if enable and instance is defined %}
         <script type="text/javascript" charset="utf-8">
+            var inputObject;
+            var oWindow;
             document.addEventListener("DOMContentLoaded", function(event) {
-                var input = document.querySelector('[data-type="elfinder-input-field"][id="{{ id }}"]');
-                input.addEventListener('click', function (event) {
-                    var childWin = window.open("{{path('rfm_show', {'instance': instance })}}?id={{ id }}", "popupWindow", "height=450, width=900");
+                var input = document.querySelector('[data-type="rfm-input-field"][id="{{ id }}"]');
+                input.addEventListener('click', function () {
+                    browseServer(input);
                 })
             });
+            function browseServer(obj) {
+                inputObject = obj;
+                OpenServerBrowser(
+                    "{{path('rfm_show', {'instance': instance })}}?id={{ id }}",
+                    screen.width * 0.7,
+                    screen.height * 0.7);
+            }
 
-            function setValue(value, element_id) {
-                document.querySelector('[data-type="elfinder-input-field"]' + (element_id ? '[id="'+ element_id +'"]': '')).value = value;
+            function OpenServerBrowser(url, width, height) {
+                var iLeft = (screen.width - width) / 2;
+                var iTop = (screen.height - height) / 2;
+                var sOptions = "toolbar=no,status=no,resizable=yes,dependent=yes";
+                sOptions += ",width=" + width;
+                sOptions += ",height=" + height;
+                sOptions += ",left=" + iLeft;
+                sOptions += ",top=" + iTop;
+                oWindow = window.open(url, "BrowseWindow", sOptions);
+            }
+
+            function SetUrl(value, width, height, alt) {
+                inputObject.value = value;
+                oWindow.close();
             }
         </script>
     {% endif %}
