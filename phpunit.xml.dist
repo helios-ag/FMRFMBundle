@@ -5,7 +5,7 @@
         <server name="KERNEL_DIR" value="./Tests/Functional" />
     </php>
     <testsuites>
-        <testsuite name="FMElfinderBundle test suite">
+        <testsuite name="FMRFMBundle test suite">
             <directory suffix="Test.php">./Tests</directory>
         </testsuite>
     </testsuites>

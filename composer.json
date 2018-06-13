@@ -30,14 +30,13 @@
         "symfony/phpunit-bridge": "~3.4|~4.0",
         "matthiasnoback/symfony-config-test":  "~2",
         "matthiasnoback/symfony-dependency-injection-test": "~1|~2",
-        "symfony/finder": "~2.8|~3.0|~4.0",
-        "satooshi/php-coveralls": "~1",
+        "symfony/finder": "~3.4|~4.0",
         "phpunit/phpunit": "~5"
     },
     "suggest": {
         "helios-ag/fm-tinymce-bundle": "TinyMCE Bundle",
         "helios-ag/fm-summernote-bundle": "Summernote Bundle",
-        "fos/ckeditor-bundle": "CKEditor Bundle"
+        "friendsofsymfony/ckeditor-bundle": "CKEditor Bundle"
     },
     "autoload": {
         "psr-4": { "FM\\RFMBundle\\": "" }
