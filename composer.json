@@ -1,7 +1,7 @@
 {
     "name": "helios-ag/fm-rfm-bundle",
-    "description": "RichFilemanager bundle, adds RichFilemanager file manager to your Symfony project",
-    "keywords": ["RichFilemanager","file manager","wysiwyg"],
+    "description": "FMRichfilemanager bundle, adds Richfilemanager file manager to your Symfony project",
+    "keywords": ["Richfilemanager","file manager","wysiwyg"],
     "type": "symfony-bundle",
     "homepage": "https://github.com/helios-ag/FMRFMBundle",
     "minimum-stability": "dev",
@@ -24,7 +24,9 @@
         "symfony/framework-bundle":            "~3.4|~4.0",
         "symfony/twig-bundle":                 "~3.4|~4.0",
         "symfony/form":                        "~3.4|~4.0",
-        "symfony/asset":                       "~3.4|~4.0"
+        "symfony/asset":                       "~3.4|~4.0",
+        "servocoder/richfilemanager":          "~2.7"
+
     },
     "require-dev" : {
         "symfony/phpunit-bridge": "~3.4|~4.0",
