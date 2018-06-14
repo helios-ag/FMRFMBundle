@@ -20,7 +20,7 @@
       "exclude": ["/Tests"]
     },
     "require": {
-        "php":                                 "^5.6|^7.0",
+        "php":                                 "^7.0",
         "symfony/framework-bundle":            "~3.4|~4.0",
         "symfony/twig-bundle":                 "~3.4|~4.0",
         "symfony/form":                        "~3.4|~4.0",
@@ -31,9 +31,8 @@
     "require-dev" : {
         "symfony/phpunit-bridge": "~3.4|~4.0",
         "matthiasnoback/symfony-config-test":  "~2",
-        "matthiasnoback/symfony-dependency-injection-test": "~1|~2",
-        "symfony/finder": "~3.4|~4.0",
-        "phpunit/phpunit": "~5"
+        "matthiasnoback/symfony-dependency-injection-test": "^2.0",
+        "symfony/finder": "~3.4|~4.0"
     },
     "suggest": {
         "helios-ag/fm-tinymce-bundle": "TinyMCE Bundle",
