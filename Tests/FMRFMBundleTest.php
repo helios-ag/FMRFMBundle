@@ -26,11 +26,6 @@ class FMRFMBundleTest extends \PHPUnit\Framework\TestCase
             ->method('addCompilerPass')
             ->with($this->isInstanceOf('FM\RFMBundle\DependencyInjection\Compiler\TwigFormPass'))
             ->will($this->returnSelf());
-        $containerBuilder
-            ->expects($this->at(1))
-            ->method('addCompilerPass')
-            ->with($this->isInstanceOf('Symfony\Component\EventDispatcher\DependencyInjection\RegisterListenersPass'))
-            ->will($this->returnSelf());
         $bundle = new FMRFMBundle();
         $bundle->build($containerBuilder);
     }

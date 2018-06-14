@@ -37,6 +37,9 @@ class RFMTypeTest extends \PHPUnit\Framework\TestCase
         $this->assertTrue($resolver->isDefined('instance'));
     }
 
+    /**
+     * @group legacy
+     */
     public function testLegacySetDefaultOptions()
     {
         if (version_compare(Kernel::VERSION_ID, '20600') >= 0) {
@@ -53,8 +56,7 @@ class RFMTypeTest extends \PHPUnit\Framework\TestCase
     {
         $options = array(
             'instance'   => 'default1',
-            'enable'     => true,
-            'homeFolder' => '/home',
+            'enable'     => true
         );
         $view = new FormView();
         $type = new RFMType();
