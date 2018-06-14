@@ -15,7 +15,11 @@ env:
     global:
         - COMPOSER_PREFER_LOWEST=false
         - SYMFONY_DEPRECATIONS_HELPER=weak
+        - SYMFONY_PHPUNIT_BRIDGE_VERSION=3.4.*
+        - SYMFONY_VERSION=3.4.*
+
 matrix:
+    fast_finish: true
     include:
         - php: 7.1
           env: SYMFONY_VERSION=3.4.* SYMFONY_PHPUNIT_BRIDGE_VERSION=3.4.* SYMFONY_DEPRECATIONS_HELPER=strict
