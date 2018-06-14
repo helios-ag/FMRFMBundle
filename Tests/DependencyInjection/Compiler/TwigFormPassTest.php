@@ -2,7 +2,7 @@
 
 namespace FM\RFMBundle\Tests\DependencyInjection\Compiler;
 
-use FM\ElfinderBundle\DependencyInjection\Compiler\TwigFormPass;
+use FM\RFMBundle\DependencyInjection\Compiler\TwigFormPass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 /**
