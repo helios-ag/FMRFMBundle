@@ -34,7 +34,6 @@ install:
 
 script:
   - SYMFONY_PHPUNIT_VERSION=6.5 ./vendor/bin/simple-phpunit $PHPUNIT_FLAGS
-  - .travis/phpstan.sh;
 
 notifications:
   email: helios.ag@gmail.com
