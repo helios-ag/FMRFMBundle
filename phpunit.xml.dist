@@ -8,7 +8,7 @@
          bootstrap="vendor/autoload.php"
 >
     <php>
-        <server name="KERNEL_DIR" value="./Tests/Functional" />
+        <server name="KERNEL_DIR" value="./tests/Functional" />
         <ini name="error_reporting" value="-1" />
     </php>
 
@@ -18,7 +18,7 @@
 
     <testsuites>
         <testsuite name="FMRFMBundle test suite">
-            <directory suffix="Test.php">./Tests</directory>
+            <directory suffix="Test.php">./tests</directory>
         </testsuite>
     </testsuites>
 
@@ -26,9 +26,9 @@
         <whitelist addUncoveredFilesFromWhitelist="true">
             <directory>./</directory>
             <exclude>
-                <directory>./Controller</directory>
-                <directory>./Resources</directory>
-                <directory>./Tests</directory>
+                <directory>./src/Controller</directory>
+                <directory>./src/Resources</directory>
+                <directory>./tests</directory>
                 <directory>./vendor</directory>
             </exclude>
         </whitelist>
@@ -39,4 +39,3 @@
         <log type="coverage-clover" target="./clover.xml"/>
     </logging>
 </phpunit>
-
