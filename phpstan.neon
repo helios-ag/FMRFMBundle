@@ -1,0 +1,6 @@
+parameters:
+    bootstrap: %currentWorkingDirectory%/tests/autoload.php
+    excludes_analyse:
+        - %currentWorkingDirectory%/Tests/autoload.php
+    ignoreErrors:
+        - '#AbstractTestCase::getMock()#'

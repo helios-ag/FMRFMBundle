@@ -20,11 +20,11 @@ matrix:
     fast_finish: true
     include:
         - php: 7.1
-          env: SYMFONY_VERSION=3.4.* SYMFONY_PHPUNIT_BRIDGE_VERSION=4.0.* SYMFONY_DEPRECATIONS_HELPER=weak_vendors
+          env: SYMFONY_VERSION=3.4.* SYMFONY_PHPUNIT_BRIDGE_VERSION=4.0.* SYMFONY_DEPRECATIONS_HELPER=weak_vendors LEVEL=0
         - php: 7.1
-          env: SYMFONY_VERSION=4.0.* SYMFONY_PHPUNIT_BRIDGE_VERSION=4.0.* SYMFONY_DEPRECATIONS_HELPER=weak_vendors
+          env: SYMFONY_VERSION=4.0.* SYMFONY_PHPUNIT_BRIDGE_VERSION=4.0.* SYMFONY_DEPRECATIONS_HELPER=weak_vendors LEVEL=0
         - php: 7.2
-          env: SYMFONY_VERSION=4.0.* SYMFONY_PHPUNIT_BRIDGE_VERSION=4.0.* SYMFONY_DEPRECATIONS_HELPER=weak_vendors
+          env: SYMFONY_VERSION=4.0.* SYMFONY_PHPUNIT_BRIDGE_VERSION=4.0.* SYMFONY_DEPRECATIONS_HELPER=weak_vendors LEVEL=0
 
 install:
   - composer require --no-update symfony/symfony:${SYMFONY_VERSION}
@@ -34,6 +34,7 @@ install:
 
 script:
   - SYMFONY_PHPUNIT_VERSION=6.5 ./vendor/bin/simple-phpunit $PHPUNIT_FLAGS
+  - .travis/phpstan.sh;
 
 notifications:
   email: helios.ag@gmail.com

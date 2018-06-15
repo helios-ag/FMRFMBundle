@@ -41,7 +41,10 @@
         "friendsofsymfony/ckeditor-bundle": "CKEditor Bundle"
     },
     "autoload": {
-        "psr-4": { "FM\\RFMBundle\\": "" }
+        "psr-4": { "FM\\RFMBundle\\": "src/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "FM\\RFMBundle\\Tests\\": "tests/" }
     },
     "extra": {
         "branch-alias": {
