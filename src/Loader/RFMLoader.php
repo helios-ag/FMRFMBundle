@@ -3,8 +3,10 @@
 namespace FM\RFMBundle\Loader;
 
 use FM\RFMBundle\Configuration\RFMConfigurationReader;
+use RFM\Api\AwsS3Api;
 use RFM\Application;
-use RFM\Repository\Local\Storage;
+use RFM\Repository\Local\Storage as LocalStorage;
+use RFM\Repository\S3\Storage as S3Storage;
 use RFM\Api\LocalApi;
 
 /**
@@ -31,9 +33,19 @@ class RFMLoader
     public function load()
     {
         $app = new Application();
-        $local = new Storage($this->configurationReader->getConfiguration($this->instance));
-        $app->setStorage($local);
-        $app->api = new LocalApi();
+        $type = $this->configurationReader->getConfigurationType($this->instance);
+        switch ($type) {
+            case 'local':
+                $local = new LocalStorage($this->configurationReader->getConfiguration($this->instance));
+                $app->setStorage($local);
+                $app->api = new LocalApi();
+                break;
+            case 's3':
+                $s3 = new S3Storage($this->configurationReader->getConfiguration($this->instance));
+                $app->setStorage($s3);
+                $app->api = new AwsS3Api();
+                break;
+        }
 
         $app->run();
     }

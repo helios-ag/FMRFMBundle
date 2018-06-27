@@ -36,6 +36,7 @@
         "friendsofphp/php-cs-fixer": "^2.10"
     },
     "suggest": {
+        "aws/aws-sdk-php": "You need AWS PHP SDK for S3 usage",
         "helios-ag/fm-tinymce-bundle": "TinyMCE Bundle",
         "helios-ag/fm-summernote-bundle": "Summernote Bundle",
         "friendsofsymfony/ckeditor-bundle": "CKEditor Bundle"
