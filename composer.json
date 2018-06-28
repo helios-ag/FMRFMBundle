@@ -58,7 +58,7 @@
             "vendor/servocoder/languages": "web/assets/richfilemanager/languages",
             "vendor/servocoder/libs": "web/assets/richfilemanager/libs",
             "vendor/servocoder/src": "web/assets/richfilemanager/src",
-            "vendor/servocoder/themes": "web/assets/richfilemanager/themes",
+            "vendor/servocoder/themes": "web/assets/richfilemanager/themes"
         }
     }
 }

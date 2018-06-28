@@ -31,11 +31,12 @@ class RFMLoader
         $this->configurationReader = $configurationReader;
     }
 
+    
     public function load()
     {
         $app = new Application();
         $type = $this->configurationReader->getConfigurationType($this->instance);
-        
+
         switch ($type) {
             case 'local':
                 $local = new LocalStorage($this->configurationReader->getConfiguration($this->instance));
