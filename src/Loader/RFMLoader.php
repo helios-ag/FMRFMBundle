@@ -4,10 +4,11 @@ namespace FM\RFMBundle\Loader;
 
 use FM\RFMBundle\Configuration\RFMConfigurationReader;
 use RFM\Api\AwsS3Api;
-use RFM\Application;
 use RFM\Repository\Local\Storage as LocalStorage;
 use RFM\Repository\S3\Storage as S3Storage;
 use RFM\Api\LocalApi;
+use Symfony\Component\HttpFoundation\Request;
+use RFM\Application;
 
 /**
  * Class RFMLoader.
