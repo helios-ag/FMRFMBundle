@@ -35,6 +35,7 @@ class RFMLoader
     {
         $app = new Application();
         $type = $this->configurationReader->getConfigurationType($this->instance);
+        
         switch ($type) {
             case 'local':
                 $local = new LocalStorage($this->configurationReader->getConfiguration($this->instance));

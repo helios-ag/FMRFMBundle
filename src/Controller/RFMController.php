@@ -19,7 +19,7 @@ class RFMController extends Controller
      * @param string $instance
      * @return void
      */
-    public function loadAction(Request $request, $instance)
+    public function loadAction($instance)
     {
         $loader = $this->get('fm_rfm.loader');
         $loader->setInstance($instance);
