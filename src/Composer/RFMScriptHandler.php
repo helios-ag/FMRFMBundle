@@ -32,10 +32,10 @@ class RFMScriptHandler extends ScriptHandler
         'themes'
       ];
 
-      $destinationDir = $version < 4 ? 'web/assets/' : 'public/assets/';
+      $destinationDir = $version < 4 ? 'web/assets/richfilemanager/' : 'public/assets/richfilemanager/';
 
       if (isset($extras['rfm-dir'])) {
-        $directory = $extras['rfm-dir'];
+        $destinationDir = $extras['rfm-dir'];
       }
 
       $fs = new Filesystem;
