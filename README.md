@@ -35,15 +35,42 @@ Add FMRFMBundle to your composer.json
 }
 ```
 
-also add **component-dir** under config node of composer.json
+If you want to override default assets directory of Richfilemanager, add next option.
+By default assets copied to `web/assets/richfilemanager` or `public/assets/richfilemanager`
+depending on Symfony version
 
 ```json
 {
     "config": {
-        "component-dir": "web/assets"
+        "rfm-dir": "web/assets/richfilemanager/"
     }
 }
 ```
+
+Add composer script
+
+`"FM\\RFMBundle\\Composer\\RFMScriptHandler::copy",`
+
+to scripts section of composer.json
+
+```json
+{
+  "scripts": {
+      "symfony-scripts": [
+          "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+          "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+          "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+          "FM\\RFMBundle\\Composer\\RFMScriptHandler::copy",
+          "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+          "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+          "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
+      ]
+    }
+}
+```
+
+Also you can copy assets manually. Copy dirs: 'config, 'images', 'languages', 'libs', 'src',
+'themes' from `vendor/servocoder/richfilemanager/` to your public assets directory
 
 Now tell composer to download the bundle by running the command:
 
@@ -51,6 +78,7 @@ Now tell composer to download the bundle by running the command:
 ```sh
 composer update helios-ag/fm-rfm-bundle
 ```
+
 
 ### Step 2: Enable the bundle
 
@@ -97,7 +125,7 @@ security:
 
 ### Add configuration options to your config.yml
 
-Example below (assumed that richfilemanager assets placed in `web/assets/richfilemanager` directory) 
+Example below (assumed that richfilemanager assets placed in `web/assets/richfilemanager` directory)
 
 ```yaml
 fm_rfm:
@@ -109,7 +137,7 @@ fm_rfm:
 ```
 
 You can see the full list of roots options [here](https://github.com/servocoder/RichFilemanager/wiki). To use them,
-convert camelCased option name to under_scored name.
+convert camelCased option names to snake_cased names.
 
 Bundle provides custom form type, RFMType (provides same functionality as in [FMElfinderBundle](https://github.com/helios-ag/FMElfinderBundle))
-and integration with CKEditor out of the box. 
+and integration with CKEditor out of the box.
